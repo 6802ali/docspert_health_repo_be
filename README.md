@@ -1,40 +1,32 @@
 Running the Django Application with Docker
 Prerequisites
 
-Docker
+1) Docker
+  installed
+
+2) Docker Compose
  installed
 
-Docker Compose
- installed
-
-A .env folder with:
-
-.django for Django environment variables (e.g., SECRET_KEY, API keys)
-
-.postgres for PostgreSQL environment variables (e.g., POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD)
+3) .env folder with:
+a .django for Django environment variables (e.g., SECRET_KEY, API keys)
+b .postgres for PostgreSQL environment variables (e.g., POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD)
 
 
 Steps to Run
-
 Build and start containers
-
 From the project root directory:
-
-docker-compose up --build
-
+run :- docker-compose up --build
 This will:
-
 Build the Docker images for the Django app (web)
-
 Start the PostgreSQL database (db)
-
 Expose Django on http://localhost:8000
 
 Open a new terminal and run:
-docker-compose run web python manage.py makemigrations
-docker-compose run web python manage.py migrate
+1) docker-compose run web python manage.py makemigrations
+2) docker-compose run web python manage.py migrate
 
 Create a superuser
-
-Run the following command to create an admin user:
 docker-compose run web python manage.py createsuperuser
+
+Access the swagger documentation 
+http://localhost:8000/api/docs/#
