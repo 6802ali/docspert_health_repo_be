@@ -1,3 +1,5 @@
+Django backend server integrated with grok ai to generate Ai summaries for patients.
+
 Running the Django Application with Docker
 Prerequisites
 
