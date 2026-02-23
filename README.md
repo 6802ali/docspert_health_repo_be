@@ -12,14 +12,11 @@ a .django for Django environment variables (e.g., SECRET_KEY, API keys)
 b .postgres for PostgreSQL environment variables (e.g., POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD)
 
 
-Steps to Run
-Build and start containers
+Steps to Run, Build and start containers
 From the project root directory:
-run :- docker-compose up --build
-This will:
-Build the Docker images for the Django app (web)
-Start the PostgreSQL database (db)
-Expose Django on http://localhost:8000
+1) run :- docker-compose up --build
+   This will: Build the Docker images for the Django app (web)
+   Start the PostgreSQL database (db) Expose Django on http://localhost:8000
 
 Open a new terminal and run:
 1) docker-compose run web python manage.py makemigrations
