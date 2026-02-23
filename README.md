@@ -29,5 +29,8 @@ Open a new terminal and run:
 Create a superuser
 :- docker-compose run web python manage.py createsuperuser
 
+run the application using 
+:- docker-compose up
+
 Access the swagger documentation 
 http://localhost:8000/api/docs/#
