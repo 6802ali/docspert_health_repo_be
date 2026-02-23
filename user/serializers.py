@@ -15,3 +15,17 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.set_password(password)
         user.save()
         return user
+    
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            "id",
+            "email",
+            "full_name",
+            "age",
+            "phone_number",
+            "is_active",
+            "is_staff",
+        ]
+        read_only_fields = fields
